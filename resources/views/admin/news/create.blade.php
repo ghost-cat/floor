@@ -1,6 +1,7 @@
 @extends('admin.layout.main')
 
 @section('more_css')
+<link rel="stylesheet" href="/assets/admin/css/simditor.css">
 @stop
 
 @section('page_title')
@@ -32,8 +33,7 @@
                     <div class="form-group">
                         <label class="col-sm-2 control-label">内容</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" id="content" name="content">
-                            <!-- <textarea class="form-control" rows="3" cols="20"></textarea> -->
+                            <textarea id="content" name="content"></textarea>
                         </div>
                     </div>
                     <div class="form-group upload-img">
@@ -66,8 +66,17 @@
 @stop
 
 @section('more_js')
+<script src="/assets/admin/js/module.js"></script>
+<script src="/assets/admin/js/hotkeys.js"></script>
+<script src="/assets/admin/js/uploader.js"></script>
+<script src="/assets/admin/js/simditor.js"></script>
 <script type="text/javascript">
 $(function(){
+
+    var editor = new Simditor({
+        textarea: $('#content')
+    });
+
     $(document).on("click", ".jq-save", function(){
         var postData = {
             title: $('#title').val(),
