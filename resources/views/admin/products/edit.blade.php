@@ -1,16 +1,15 @@
 @extends('admin.layout.main')
 
 @section('more_css')
-<link rel="stylesheet" href="/assets/admin/css/simditor.css">
 @stop
 
 @section('page_title')
-    新闻资讯
+    产品库
 @stop
 
 @section('breadcrumb')
     <li>
-        <a href="#">修改新闻资讯</a>
+        <a href="#">修改产品</a>
     </li>
 @stop
 
@@ -19,7 +18,7 @@
     <div class="col-md-12">
         <div class="box box-info">
             <div class="box-header with-border">
-              <h3 class="box-title">修改新闻</h3>
+              <h3 class="box-title">修改产品</h3>
             </div><!-- /.box-header -->
             <!-- form start -->
             <form class="form-horizontal">
@@ -27,13 +26,19 @@
                     <div class="form-group">
                         <label class="col-sm-2 control-label">标题</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" id="title" name="title" value="{{ $news->title }}">
+                            <input type="text" class="form-control" id="title" name="title" value="{{ $product->title }}">
                         </div>
                     </div>
                     <div class="form-group">
-                        <label class="col-sm-2 control-label">内容</label>
+                        <label class="col-sm-2 control-label">编号</label>
                         <div class="col-sm-10">
-                            <textarea id="content" name="content">{{ $news->content }}</textarea>
+                            <input type="text" class="form-control" id="code" name="code" value="{{ $product->code }}">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">规格</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="size" name="size" value="{{ $product->size }}">
                         </div>
                     </div>
                     <div class="form-group upload-img">
@@ -41,7 +46,7 @@
                         <div class="col-md-10">
                             <div class="fileinput fileinput-new">
                                 <div class="fileinput-preview thumbnail fileinput-image-upload" style="width: 240px; height: 120px; line-height: 150px;">
-                                    <img src="{{ $news->image }}" style="max-width:220px;max-height:100px;margin:5px" />
+                                    <img src="{{ $product->image }}" style="max-width:220px;max-height:100px;margin:5px" />
                                     <input id="image" type="hidden" name="image" value="" />
                                 </div>
                                 <div>
@@ -57,8 +62,8 @@
                     </div>
                 </div>
                 <div class="box-footer">
-                    <div class="btn btn-info pull-right jq-save" data-id="{{ $news->id }}">提交</div>
-                    <a href="/admin/news"><div class="btn btn-info pull-right" style="margin-right: 20px">返回</div></a>
+                    <div class="btn btn-info pull-right jq-save" data-id="{{ $product->id }}">提交</div>
+                    <a href="/admin/products"><div class="btn btn-info pull-right" style="margin-right: 20px">返回</div></a>
                 </div>
             </form>
         </div>
@@ -67,28 +72,20 @@
 @stop
 
 @section('more_js')
-<script src="/assets/admin/js/module.js"></script>
-<script src="/assets/admin/js/hotkeys.js"></script>
-<script src="/assets/admin/js/uploader.js"></script>
-<script src="/assets/admin/js/simditor.js"></script>
 <script type="text/javascript">
 $(function(){
-
-    // 初始化富文本编辑器
-    var editor = new Simditor({
-        textarea: $('#content')
-    });
 
     $(document).on("click", ".jq-save", function(){
         var id = $(this).data('id');
         var postData = {
             title: $('#title').val(),
-            content: $('#content').val(),
+            code: $('#code').val(),
+            size: $('#size').val(),
             image: $('#image').val()
         };
         $.ajax({
             type: "PUT",
-            url: '/admin/news/'+id,
+            url: '/admin/products/'+id,
             data: postData,
             dataType: "json",
             success: function (data) {
@@ -141,7 +138,7 @@ $(function(){
         $(".upload-img .fileinput-image-upload input[name='image']").val(data.path);
     };
 
-    uploader("/admin/news/imgUpload", 'image-upload', imageUploadCallback);
+    uploader("/admin/products/imgUpload", 'image-upload', imageUploadCallback);
 });
 
 </script>

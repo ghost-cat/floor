@@ -83,9 +83,9 @@ class ProductsController extends Controller
      **/
     public function edit($id)
     {
-        $products = Products::find($id);
+        $product = Products::find($id);
 
-        return view('admin.products.edit')->with('products', $products);
+        return view('admin.products.edit')->with('product', $product);
     }
 
     /**

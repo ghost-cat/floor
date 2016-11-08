@@ -20,13 +20,15 @@ class Products extends Model
     {
         $rules = [
             'title' => 'required',
-            'content'   => 'required',
+            'code'   => 'required',
+            'size'   => 'required',
             'image'   => 'required',
         ];
 
         $messages = [
             'title.required' => '请填写标题',
-            'content.required' => '内容不能为空',
+            'code.required' => '请填写编号',
+            'size.required' => '规格尺寸',
             'image.required' => '请上传图片',
         ];
 

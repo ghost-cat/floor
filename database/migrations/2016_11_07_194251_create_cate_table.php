@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateProductsTable extends Migration
+class CreateCateTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,12 +12,11 @@ class CreateProductsTable extends Migration
      */
     public function up()
     {
-        Schema::create('products', function(Blueprint $table) {
+        Schema::create('cate', function(Blueprint $table) {
             $table->increments('id');
             $table->string('title')->comment('标题');
-            $table->string('code')->comment('编号');
-            $table->string('size')->comment('规格尺寸');
-            $table->string('image')->comment('图片');
+            $table->string('parent_cate')->comment('一级分类');
+            $table->text('product_ids')->comment('产品id');
             $table->timestamps();
         });
     }
@@ -29,6 +28,6 @@ class CreateProductsTable extends Migration
      */
     public function down()
     {
-        Schema::drop('products');
+        Schema::drop('cate');
     }
 }
