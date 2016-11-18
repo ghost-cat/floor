@@ -11,7 +11,7 @@
                 <a href="#"><i class="glyphicon glyphicon-list"></i> <span>产品中心</span> <i class="fa fa-angle-left pull-right"></i></a>
                 <ul class="treeview-menu menu-open" style="display: block;">
                     <li><a href="/admin/products">产品库</a></li>
-                    <li><a href="#">分类管理</a></li>
+                    <li><a href="/admin/cate">分类管理</a></li>
                 </ul>
             </li>
             @else
@@ -19,7 +19,7 @@
                 <a href="#"><i class="glyphicon glyphicon-list"></i> <span>产品中心</span> <i class="fa fa-angle-left pull-right"></i></a>
                 <ul class="treeview-menu" style="display: none;">
                     <li><a href="/admin/products">产品库</a></li>
-                    <li><a href="#">分类管理</a></li>
+                    <li><a href="/admin/cate">分类管理</a></li>
                 </ul>
             </li>
             @endif

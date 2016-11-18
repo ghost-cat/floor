@@ -62,7 +62,7 @@
                 </div>
                 <div class="box-footer">
                     <div class="btn btn-info pull-right jq-save">提交</div>
-                    <a href="/admin/products"><div class="btn btn-info pull-right" style="margin-right: 20px">返回</div></a>
+                    <a href="/admin/cate"><div class="btn btn-info pull-right" style="margin-right: 20px">返回</div></a>
                 </div>
             </form>
         </div>

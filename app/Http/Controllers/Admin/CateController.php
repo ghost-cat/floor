@@ -6,54 +6,53 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Model\Cate;
 use App\Model\Products;
-use App\Classes\Uploader;
 
-class ProductsController extends Controller
+class CateController extends Controller
 {
     /**
-     * 新闻列表
+     * 分类列表
      *
      * @return view
      **/
     public function index(Request $request)
     {
         $query = $request->all();
-        $products = (new Products)->lists($query);
+        $cate = (new Cate)->lists($query);
 
-        return view('admin.products.index')
-            ->with('products', $products);
+        return view('admin.cate.index')
+            ->with('cate', $cate);
     }
 
     /**
-     * 添加新闻页
+     * 添加分类页
      *
      * @return view
      **/
     public function create()
     {
-        return view('admin.products.create');
+        return view('admin.cate.create');
     }
 
     /**
-     * 添加新闻
+     * 添加分类
      *
      * @return json
      **/
     public function store(Request $request)
     {
         $data = $request->all();
-
-        $validator = (new Products)->validate($data);
+        $validator = (new Cate)->validate($data);
         if ($validator->fails()) {
             
             return response()->json(['status' => 0, 'message' => $validator->messages()->first()]);
         }
         
-        $products = (new Products)->store($data);
-        if ($products) {
+        $cate = (new Cate)->store($data);
+        if ($cate) {
 
-            return response()->json(['status' => 1, 'message' => '添加成功', 'data' => $products]);
+            return response()->json(['status' => 1, 'message' => '添加成功', 'data' => $cate]);
         }
 
         return response()->json(['status' => 0, 'message' => '添加失败']);
@@ -66,26 +65,28 @@ class ProductsController extends Controller
      **/
     public function show($id)
     {
-        $data = Products::find($id);
+        $data = Cate::find($id);
 
         if ($data) {
 
             return response()->json(['status' => 1, 'message' => '查询成功', 'data' => $data]);
         }
 
-        return response()->json(['status' => 0, 'message' => "ID为{$id}商品不存在"]);
+        return response()->json(['status' => 0, 'message' => '查询失败']);
     }
 
     /**
-     * 资讯编辑页
+     * 分类编辑页
      *
      * @return view
      **/
     public function edit($id)
     {
-        $product = Products::find($id);
+        $cate = Cate::find($id);
+        $productIds = explode(',', $cate->product_ids);
+        $cate->products = Products::whereIn('id', $productIds)->get();
 
-        return view('admin.products.edit')->with('product', $product);
+        return view('admin.cate.edit')->with('cate', $cate);
     }
 
     /**
@@ -97,16 +98,17 @@ class ProductsController extends Controller
     {
         $data = $request->all();
 
-        $validator = (new Products)->validate($data);
+        $validator = (new Cate)->validate($data);
         if ($validator->fails()) {
             
             return response()->json(['status' => 0, 'message' => $validator->messages()->first()]);
         }
         
-        $products = (new Products)->find($id);
-        if ($products->update($data)) {
+        $cate = (new Cate)->find($id);
+        $data['product_ids'] = implode(',', $data['product_ids']);
+        if ($cate->update($data)) {
 
-            return response()->json(['status' => 1, 'message' => '更新成功', 'data' => $products]);
+            return response()->json(['status' => 1, 'message' => '更新成功', 'data' => $cate]);
         }
 
         return response()->json(['status' => 0, 'message' => '更新失败']);
@@ -119,24 +121,12 @@ class ProductsController extends Controller
      **/
     public function destroy($id)
     {
-        $products = Products::find($id);
+        $cate = Cate::find($id);
 
-        if ($products->delete()) {
+        if ($cate->delete()) {
             return response()->json(['status' => 1, 'message' => '删除成功']);
         }
 
         return response()->json(['status' => 0, 'message' => '删除失败']);
-    }
-
-    /**
-     * 上传图片
-     *
-     * @return json
-     **/
-    public function imgUpload(Request $request)
-    {
-        $result = (new Uploader)->upload('products', $request);
-
-        return response()->json($result);
     }
 }
