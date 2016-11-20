@@ -66,8 +66,10 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth', 'namespace' => 'Admin
 
 // 前台页面
 Route::group(['namespace' => 'Frontend'], function(){
-    
+    // 主页
+    Route::get('', ['as' => 'index', 'uses' => 'HomeController@index']);
+
+    // 产品中心
+    Route::get('/products', ['as' => 'products', 'uses' => 'ProductsController@index']);
 });
 Route::auth();
-
-Route::get('/home', 'HomeController@index');

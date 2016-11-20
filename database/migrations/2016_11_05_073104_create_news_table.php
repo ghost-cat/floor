@@ -16,6 +16,7 @@ class CreateNewsTable extends Migration
             $table->increments('id');
             $table->enum('type', ['news', 'course'])->comment('类型');
             $table->string('title')->comment('标题');
+            $table->string('overview')->comment('简介');
             $table->text('content')->comment('正文');
             $table->string('image')->comment('图片');
             $table->enum('status', ['unpublished', 'publish'])->comment('状态');

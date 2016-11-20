@@ -57,4 +57,27 @@ class Cate extends Model
         return Cate::create($data);
     }
 
+    /**
+     * 获取分类列表（产品中心）
+     *
+     * @return array
+     **/
+    public function getCateList()
+    {
+        $data = [
+            'recommend' => [],
+            'solid_wood' => [],
+            'layers' => [],
+            'heat' => [],
+            'pattern' => [],
+        ];
+        $cate = Cate::all();
+
+        foreach ($cate as $item) {
+            $data[$item->parent_cate][] = $item;
+        }
+
+        return $data;
+    }
+
 }

@@ -56,4 +56,22 @@ class Products extends Model
     {
         return Products::create($data);
     }
+
+    /**
+     * 获取产品列表（产品中心）
+     *
+     * @return obj
+     **/
+    public function getProductList($input)
+    {
+        if (isset($input['cate_id']) && !empty($input['cate_id'])) {
+            $cate = Cate::find($input['cate_id']);
+            $productIds = explode(',', $cate->product_ids);
+
+            return Products::whereIn('id', $productIds)->paginate(12);
+        } else {
+            return Products::orderBy('created_at', 'desc')->paginate(12);
+        }
+
+    }
 }

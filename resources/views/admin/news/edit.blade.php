@@ -31,6 +31,12 @@
                         </div>
                     </div>
                     <div class="form-group">
+                        <label class="col-sm-2 control-label">简介</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="overview" name="overview" value="{{ $news->overview }}">
+                        </div>
+                    </div>
+                    <div class="form-group">
                         <label class="col-sm-2 control-label">内容</label>
                         <div class="col-sm-10">
                             <textarea id="content" name="content">{{ $news->content }}</textarea>
@@ -42,7 +48,7 @@
                             <div class="fileinput fileinput-new">
                                 <div class="fileinput-preview thumbnail fileinput-image-upload" style="width: 240px; height: 120px; line-height: 150px;">
                                     <img src="{{ $news->image }}" style="max-width:220px;max-height:100px;margin:5px" />
-                                    <input id="image" type="hidden" name="image" value="" />
+                                    <input id="image" type="hidden" name="image" value="{{ $news->image }}" />
                                 </div>
                                 <div>
                                     <span class="btn default btn-file">
@@ -83,6 +89,7 @@ $(function(){
         var id = $(this).data('id');
         var postData = {
             title: $('#title').val(),
+            overview: $('#overview').val(),
             content: $('#content').val(),
             image: $('#image').val()
         };

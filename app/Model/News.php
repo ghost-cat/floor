@@ -20,12 +20,14 @@ class News extends Model
     {
         $rules = [
             'title' => 'required',
+            'overview' => 'required|max:255',
             'content'   => 'required',
             'image'   => 'required',
         ];
 
         $messages = [
             'title.required' => '请填写标题',
+            'overview.required' => '请填写简介',
             'content.required' => '内容不能为空',
             'image.required' => '请上传图片',
         ];
@@ -55,5 +57,15 @@ class News extends Model
         $data['status'] = 'publish';
         
         return News::create($data);
+    }
+
+    /**
+     * 获取首页资讯
+     *
+     * @return obj
+     **/
+    public function getHomePageNews()
+    {
+        return News::orderBy('created_at', 'desc')->take(3)->get();
     }
 }
