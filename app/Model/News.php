@@ -44,7 +44,7 @@ class News extends Model
     {
         $query = News::orderBy('created_at', 'desc');
 
-        return $query->paginate(10);
+        return $query->paginate(5);
     }
 
     /**

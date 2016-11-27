@@ -57,7 +57,7 @@
                                 </div>
                             </div>
                             <div class="clearfix">
-                                <span class="label label-danger">NOTE! </span>大小不能超过1M
+                                <span class="label label-danger">NOTE! </span>大小不能超过1M，图片尺寸为350x220或同比例
                             </div>
                         </div>
                     </div>

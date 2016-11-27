@@ -127,7 +127,7 @@ $(document).ready(function() {
             <div class="col-md-4 news-grid">
                 <a href="single.html">{{ $item->title }}</a>
                 <span>{{ date('Y/m/d', strtotime($item->created_at)) }}</span>
-                <a class="mask" href="#"><img src="{{ $item->image }}" class="img-responsive zoom-img" /></a>
+                <a class="mask" href="#"><img src="{{ $item->image }}" class="img-responsive zoom-img" style="max-height: 220px;" /></a>
                 <div class="news-info">
                     <p>{{ $item->overview }}</p>
                 </div>

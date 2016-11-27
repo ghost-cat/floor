@@ -15,16 +15,17 @@
                 <p>地址：浙江湖州南浔经济开发区</p>
             </div>
             <div class="col-md-4 footer-grid">
-                <p class="text-left">首页</p>
-                <p class="text-left">产品中心</p>
-                <p class="text-left">新闻资讯</p>
-                <p class="text-left">案例展示</p>
-                <p class="text-left">联系我们</p>
+                <p class="text-left"><a href="/">首页</a></p>
+                <p class="text-left"><a href="/products">产品中心</a></p>
+                <p class="text-left"><a href="/news">新闻资讯</a></p>
+                <p class="text-left"><a href="/cases">案例展示</a></p>
+                <p class="text-left"><a href="/about">关于我们</a></p>
+                <p class="text-left"><a href="/contact">联系我们</a></p>
             </div>
             <div class="clearfix"></div>
         </div>
     </div>
     <div class="footer-bottom">
-        <p class="text-center">Copyright &copy; 2015.Company name All rights reserved</p>
+        <p class="text-center">Copyright &copy; www.yongchendiban.com</p>
     </div>
 </div>

@@ -71,5 +71,18 @@ Route::group(['namespace' => 'Frontend'], function(){
 
     // 产品中心
     Route::get('/products', ['as' => 'products', 'uses' => 'ProductsController@index']);
+
+    // 新闻资讯
+    Route::get('/news', ['as' => 'news', 'uses' => 'NewsController@index']);
+    Route::get('/news/{id}', ['as' => 'news.show', 'uses' => 'NewsController@show']);
+
+    // 案例展示
+    Route::get('/cases', ['as' => 'cases', 'uses' => 'CasesController@index']);
+
+    // 关于我们
+    Route::get('/about', ['as' => 'about', 'uses' => 'AboutController@index']);
+
+    // 联系我们
+    Route::get('/contact', ['as' => 'contact', 'uses' => 'ContactController@index']);
 });
 Route::auth();

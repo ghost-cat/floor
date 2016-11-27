@@ -40,7 +40,7 @@ class Cases extends Model
     {
         $query = Cases::orderBy('created_at', 'desc');
 
-        return $query->paginate(10);
+        return $query->paginate(9);
     }
 
     /**

@@ -7,7 +7,7 @@
     </div>
     <div class="header-bottom">
         <div class="logo text-center">
-            <h1><a href="index.html">艾维利地板</a></h1>
+            <h1><a href="/">建峰地板</a></h1>
         </div>
         <!-- navigation -->
         <div class="navigation">
@@ -26,9 +26,10 @@
                           <ul class="nav navbar-nav">
                             <li {{ Route::currentRouteName() == 'index' ? 'class=active' : '' }}><a href="/">首页 <span class="sr-only">(current)</span></a></li>
                             <li {{ Route::currentRouteName() == 'products' ? 'class=active' : '' }}><a href="/products">产品中心</a></li>
-                            <li><a href="#">新闻资讯</a></li>
-                            <li><a href="#">案例展示</a></li>
-                            <li><a href="#">联系我们</a></li>
+                            <li {{ in_array(Route::currentRouteName(), ['news', 'news.show']) ? 'class=active' : '' }}><a href="/news">新闻资讯</a></li>
+                            <li {{ Route::currentRouteName() == 'cases' ? 'class=active' : '' }}><a href="/cases">案例展示</a></li>
+                            <li {{ Route::currentRouteName() == 'about' ? 'class=active' : '' }}><a href="/about">关于建峰</a></li>
+                            <li {{ Route::currentRouteName() == 'contact' ? 'class=active' : '' }}><a href="/contact">联系我们</a></li>
                           </ul>
                       <div class="clearfix"></div>
                     </div>

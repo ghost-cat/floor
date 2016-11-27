@@ -12,7 +12,7 @@ use App\Model\Cate;
 class ProductsController extends Controller
 {
     /**
-     * 主页
+     * 产品中心
      *
      * @return view
      **/
