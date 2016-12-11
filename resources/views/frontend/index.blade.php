@@ -33,12 +33,15 @@ $(document).ready(function() {
   });
 });
 </script>
-<div class="welcome text-center">
+<div class="welcome">
     <div class="container">
-        <h2>Welcome</h2>
-        <p>
-            浙江艾维利木业坐落于有“实木之都“之称的南浔，集地板研发、生产、品牌行销领于一体。公司拥有德国顶尖的高效数字智能化生产设备，
-            拥有全球A级的进口原木，主要生产加工实木地板、实木多层地板、强化地板，多年来致力于为全球消费者提供品质卓越、时尚领先的地板产品
+        <h2 class="text-center">关于永晨</h2>
+        <p style="text-indent: 2em">
+            永晨地板是浙江浔梦家居有限公司旗下一品牌 坐落于有“实木地板之都“之称的湖州南浔，集地板研发、生产、品牌行销领于一体。
+            公司拥有德国顶尖的高效数字智能化生产设备，拥有全球A级的进口原木，主要生产加工实木地板、实木多层地板、强化地板，
+            多年来致力于为全球消费者提供品质卓越、时尚领先的地板产品。永晨地板已经逐步实现设计、生产、行销的国际化运作。
+            企业先后通过“ISO09001国际质量管理体系认证”、“ISO014001国际环境管理体系认证”，
+            永晨地板销售网络及贸易已覆盖全国30多个省市及北美、欧洲等50多个国家和地区，是具有全球竞争力的优势企业之一，是具有全球竞争力的优势企业之一。
         </p>
     </div>
 </div>
@@ -52,7 +55,7 @@ $(document).ready(function() {
          <div class="categorie-grids cs-style-1">
                  <div class="col-md-4 cate-grid grid">
                     <figure>
-                        <img src="/assets/frontend/images/c1.jpg" alt="">
+                        <img src="/assets/frontend/images/index1.jpg" alt="">
                         <figcaption>
                         <h3>standard chunk</h3>
                             <span>Accusantium Dolor</span>
@@ -61,7 +64,7 @@ $(document).ready(function() {
                  </div>
                  <div class="col-md-4 cate-grid grid">
                      <figure>
-                        <img src="/assets/frontend/images/c2.jpg" alt="">
+                        <img src="/assets/frontend/images/index6.jpg" alt="">
                         <figcaption>
                         <h3>standard chunk</h3>
                             <span>Accusantium Dolor</span>
@@ -72,7 +75,7 @@ $(document).ready(function() {
 
                  <div class="col-md-4 cate-grid grid">
                      <figure>
-                        <img src="/assets/frontend/images/c3.jpg" alt="">
+                        <img src="/assets/frontend/images/index3.jpg" alt="">
                         <figcaption>
                         <h3>standard chunk</h3>
                             <span>Accusantium Dolor</span>
@@ -82,7 +85,7 @@ $(document).ready(function() {
 
                  <div class="col-md-4 cate-grid grid">
                     <figure>
-                        <img src="/assets/frontend/images/c4.jpg" alt="">
+                        <img src="/assets/frontend/images/index4.jpg" alt="">
                         <figcaption>
                         <h3>standard chunk</h3>
                             <span>Accusantium Dolor</span>
@@ -92,7 +95,7 @@ $(document).ready(function() {
 
                  <div class="col-md-4 cate-grid grid">
                     <figure>
-                        <img src="/assets/frontend/images/c5.jpg" alt="">
+                        <img src="/assets/frontend/images/index5.jpg" alt="">
                         <figcaption>
                         <h3>standard chunk</h3>
                             <span>Accusantium Dolor</span>
@@ -102,7 +105,7 @@ $(document).ready(function() {
 
                  <div class="col-md-4 cate-grid grid">
                      <figure>
-                        <img src="/assets/frontend/images/c6.jpg" alt="">
+                        <img src="/assets/frontend/images/index2.jpg" alt="">
                         <figcaption>
                         <h3>standard chunk</h3>
                             <span>Accusantium Dolor</span>
@@ -120,14 +123,14 @@ $(document).ready(function() {
     <div class="container">
         <div class="news-head text-center">
             <h3>资讯</h3>
-            <p>Cras porttitor imperdiet volutpat nulla malesuada lectus eros ut convallis felis consectetur ut</p>
+            <p>实时发布企业最新动态及行业新闻资讯</p>
         </div>
         <div class="news-grids">
             @foreach($news as $item)
             <div class="col-md-4 news-grid">
-                <a href="single.html">{{ $item->title }}</a>
+                <a href="/news/{{ $item->id }}">{{ $item->title }}</a>
                 <span>{{ date('Y/m/d', strtotime($item->created_at)) }}</span>
-                <a class="mask" href="#"><img src="{{ $item->image }}" class="img-responsive zoom-img" style="max-height: 220px;" /></a>
+                <a class="mask" href="/news/{{ $item->id }}"><img src="{{ $item->image }}" class="img-responsive zoom-img" style="max-height: 220px;" /></a>
                 <div class="news-info">
                     <p>{{ $item->overview }}</p>
                 </div>

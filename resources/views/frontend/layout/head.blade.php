@@ -1,7 +1,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>艾维利地板</title>
+    <title>永晨地板</title>
     
     <link href="/assets/frontend/css/bootstrap.css" rel='stylesheet' type='text/css' />
     <link href="/assets/frontend/css/owl.carousel.css" rel="stylesheet">
