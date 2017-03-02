@@ -1,7 +1,7 @@
 body{
 	padding:0;
 	margin:0;
-    font-family: 'Open Sans', sans-serif;
+    font-family:"Microsoft YaHei";
 	background:#FFF;
 }
 body a{
@@ -11,10 +11,7 @@ body a{
 	-o-transition:0.5s all;
 	-ms-transition:0.5s all;
 }
-@font-face {
-   font-family: 'Dorsa-Regular';
-   src: url(../fonts/Dorsa-Regular.ttf)format('truetype');
-}
+
 input[type="button"],input[type="submit"]{
 	transition:0.5s all;
 	-webkit-transition:0.5s all;
@@ -25,11 +22,11 @@ input[type="button"],input[type="submit"]{
 h1,h2,h3,h4,h5,h6{
 	margin:0;	
 	padding:0;
-	font-family: 'Dorsa-Regular';
+    font-family:"Microsoft YaHei";
 }	
 p{
 	margin:0;
-	font-family: 'Open Sans', sans-serif;
+    font-family:"Microsoft YaHei";
 }
 ul{
 	margin:0;
@@ -104,7 +101,7 @@ a i.dribble {
     font-weight: 400;
     color: #3382C9;
     text-decoration: none;
-    font-family: 'Dorsa-Regular';
+    font-family:"Microsoft YaHei";
     letter-spacing: 5px;
 }
 .navbar {
@@ -624,7 +621,7 @@ ul.social-slide li i.mac{
 .callbacks_tabs a:after {
 	content: "\f111";
 	font-size:0;
-	font-family: FontAwesome;
+    font-family:"Microsoft YaHei";
 	visibility: visible;
 	display: block;
 	display:inline-block;
@@ -895,7 +892,7 @@ a.button img {
     margin: 0 auto 13px;
     letter-spacing: 1px;
     max-width: 930px;
-    font-family: 'Open Sans', sans-serif;
+    font-family:"Microsoft YaHei";
 	padding: 0;
 }
 .about-top h3 {
@@ -1064,7 +1061,7 @@ a.button img {
 	font-size: 9px;
 	letter-spacing: 1px;
 	padding-top: 4px;
-	font-family: 'Open Sans', Arial, sans-serif;
+    font-family:"Microsoft YaHei";
 }
 
 .ch-info p a:hover {
