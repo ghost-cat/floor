@@ -1,8 +1,7 @@
 <header class="main-header">
 
     <a href="/admin/index" class="logo">
-        <span class="logo-mini"><b>A</b>LT</span>
-        <span class="logo-lg"><b>Admin</b>LTE</span>
+        <span class="logo-lg"><b>永晨地板管理后台</b></span>
     </a>
 
     <nav class="navbar navbar-static-top" role="navigation">

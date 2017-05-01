@@ -8,13 +8,13 @@
     <div class="flexslider">
         <ul class="slides">
             <li>
-                <img src="/assets/frontend/images/20160122122516.jpg" />
+                <img src="/assets/frontend/images/ban-index1.jpg" />
             </li>
             <li>
-                <img src="/assets/frontend/images/20160122123001.jpg" />
+                <img src="/assets/frontend/images/ban-index2.jpg" />
             </li>
             <li>
-                <img src="/assets/frontend/images/20160122123107.jpg" />
+                <img src="/assets/frontend/images/ban-index3.jpg" />
             </li>
         </ul>
     </div>
