@@ -2,12 +2,13 @@
     <div class="header-top">
         <div class="container">
             <p class="location"><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>您好！欢迎访问永晨地板官方网站！</p>
-            <p class="phonenum"><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>0572-3092627</p>
+            <p class="phonenum"><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>全国热线：400-053-8001</p>
         </div>
     </div>
     <div class="header-bottom">
-        <div class="logo text-center">
-            <h1><a href="/">永晨地板</a></h1>
+        <div class="logo">
+            <!-- <h1><a href="/">永晨地板</a></h1> -->
+            <img style="margin-left: 6%" src="/assets/frontend/images/logo.jpg">
         </div>
         <!-- navigation -->
         <div class="navigation">

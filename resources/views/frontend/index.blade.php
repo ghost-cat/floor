@@ -35,7 +35,6 @@ $(document).ready(function() {
 </script>
 <div class="welcome">
     <div class="container">
-        <h2 class="text-center">关于永晨</h2>
         <p style="text-indent: 2em">
             永晨地板是浙江浔工枋家居有限公司旗下一品牌 坐落于有“实木地板之都“之称的湖州南浔，集地板研发、生产、品牌行销领于一体。
             公司拥有德国顶尖的高效数字智能化生产设备，拥有全球A级的进口原木，主要生产加工实木地板、实木多层地板、强化地板，
@@ -50,15 +49,15 @@ $(document).ready(function() {
 <div id="cate" class="categories">
      <div class="container">
         <div class="cat-head">
-            <h3>新品推荐</h3>
+            <h2>新品推荐</h2>
         </div>
          <div class="categorie-grids cs-style-1">
                  <div class="col-md-4 cate-grid grid">
                     <figure>
                         <img src="/assets/frontend/images/index1.jpg" alt="">
                         <figcaption>
-                        <h3>standard chunk</h3>
-                            <span>Accusantium Dolor</span>
+                        <h3>recommend</h3>
+                            <span>Morning Floor</span>
                         </figcaption>
                     </figure>
                  </div>
@@ -66,8 +65,8 @@ $(document).ready(function() {
                      <figure>
                         <img src="/assets/frontend/images/index6.jpg" alt="">
                         <figcaption>
-                        <h3>standard chunk</h3>
-                            <span>Accusantium Dolor</span>
+                        <h3>recommend</h3>
+                            <span>Morning Floor</span>
                         </figcaption>
                     </figure>
                  </div>
@@ -77,8 +76,8 @@ $(document).ready(function() {
                      <figure>
                         <img src="/assets/frontend/images/index3.jpg" alt="">
                         <figcaption>
-                        <h3>standard chunk</h3>
-                            <span>Accusantium Dolor</span>
+                        <h3>recommend</h3>
+                            <span>Morning Floor</span>
                         </figcaption>
                     </figure>
                  </div>
@@ -87,8 +86,8 @@ $(document).ready(function() {
                     <figure>
                         <img src="/assets/frontend/images/index4.jpg" alt="">
                         <figcaption>
-                        <h3>standard chunk</h3>
-                            <span>Accusantium Dolor</span>
+                        <h3>recommend</h3>
+                            <span>Morning Floor</span>
                         </figcaption>
                     </figure>
                  </div>
@@ -97,8 +96,8 @@ $(document).ready(function() {
                     <figure>
                         <img src="/assets/frontend/images/index5.jpg" alt="">
                         <figcaption>
-                        <h3>standard chunk</h3>
-                            <span>Accusantium Dolor</span>
+                        <h3>recommend</h3>
+                            <span>Morning Floor</span>
                         </figcaption>
                     </figure>
                  </div>
@@ -107,8 +106,8 @@ $(document).ready(function() {
                      <figure>
                         <img src="/assets/frontend/images/index2.jpg" alt="">
                         <figcaption>
-                        <h3>standard chunk</h3>
-                            <span>Accusantium Dolor</span>
+                        <h3>recommend</h3>
+                            <span>Morning Floor</span>
                         </figcaption>
                     </figure>
                  </div>
@@ -122,8 +121,7 @@ $(document).ready(function() {
 <div class="news" id="blog">
     <div class="container">
         <div class="news-head text-center">
-            <h3>资讯</h3>
-            <p>实时发布企业最新动态及行业新闻资讯</p>
+            <h2>资讯</h2>
         </div>
         <div class="news-grids">
             @foreach($news as $item)
