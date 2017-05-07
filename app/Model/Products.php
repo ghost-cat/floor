@@ -64,14 +64,27 @@ class Products extends Model
      **/
     public function getProductList($input)
     {
+        $query = Products::orderBy('created_at', 'desc');
+
         if (isset($input['cate_id']) && !empty($input['cate_id'])) {
             $cate = Cate::find($input['cate_id']);
             $productIds = explode(',', $cate->product_ids);
 
-            return Products::whereIn('id', $productIds)->paginate(12);
-        } else {
-            return Products::orderBy('created_at', 'desc')->paginate(12);
+            $query = $query->whereIn('id', $productIds);
         }
 
+        if (isset($input['parent_cate']) && !empty($input['parent_cate'])) {
+            $cate = Cate::where('parent_cate', $input['parent_cate'])->get();
+            $productIds = [];
+            foreach ($cate as $item) {
+                $productIds[] = $item->product_ids;
+            }
+            $productIds = implode(',', $productIds);
+            $productIds = array_unique(explode(',', $productIds));
+
+            $query = $query->whereIn('id', $productIds);
+        }
+
+        return $query->paginate(12);
     }
 }

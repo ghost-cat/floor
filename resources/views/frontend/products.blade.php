@@ -13,7 +13,7 @@
             <ul>
                 <li>
                     <ul>
-                        <li>推荐产品</li>
+                        <li><a href="/products?parent_cate=recommend">推荐产品</a></li>
                         @foreach($cate['recommend'] as $item)
                             <li><a href="/products?cate_id={{ $item->id }}" id="childnav">>{{ $item->title }}</a></li>
                         @endforeach
@@ -22,7 +22,7 @@
                 <hr>
                 <li>
                     <ul>
-                        <li>实木地板</li>
+                        <li><a href="/products?parent_cate=solid_wood">实木地板</a></li>
                         @foreach($cate['solid_wood'] as $item)
                             <li><a href="/products?cate_id={{ $item->id }}" id="childnav">>{{ $item->title }}</a></li>
                         @endforeach
@@ -31,7 +31,7 @@
                 <hr>
                 <li>
                     <ul>
-                        <li>多层地板</li>
+                        <li><a href="/products?parent_cate=layers">多层地板</a></li>
                         @foreach($cate['layers'] as $item)
                             <li><a href="/products?cate_id={{ $item->id }}" id="childnav">>{{ $item->title }}</a></li>
                         @endforeach
@@ -40,7 +40,7 @@
                 <hr>
                 <li>
                     <ul>
-                        <li>地热地板</li>
+                        <li><a href="/products?parent_cate=heat">地热地板</a></li>
                         @foreach($cate['heat'] as $item)
                             <li><a href="/products?cate_id={{ $item->id }}" id="childnav">>{{ $item->title }}</a></li>
                         @endforeach
@@ -49,7 +49,7 @@
                 <hr>
                 <li>
                     <ul>
-                        <li>拼花地板</li>
+                        <li><a href="/products?parent_cate=pattern">拼花地板</a></li>
                         @foreach($cate['pattern'] as $item)
                             <li><a href="/products?cate_id={{ $item->id }}" id="childnav">>{{ $item->title }}</a></li>
                         @endforeach
