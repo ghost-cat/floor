@@ -8,7 +8,7 @@
     <div class="header-bottom">
         <div class="logo">
             <!-- <h1><a href="/">永晨地板</a></h1> -->
-            <img style="margin-left: 6%" src="/assets/frontend/images/logo.jpg">
+            <a href="/"><img style="margin-left: 6%" src="/assets/frontend/images/logo.jpg"></a>
         </div>
         <!-- navigation -->
         <div class="navigation">
