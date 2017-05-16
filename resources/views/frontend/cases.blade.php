@@ -4,7 +4,7 @@
 @stop
 
 @section('page_content')
-<img src="/assets/frontend/images/ban-cases.jpg" style="width: 100%" class="img-responsive" alt="Responsive image">
+<img src="/assets/frontend/images/ban-cases.jpg" style="width: 100%;padding: 5px" class="img-responsive" alt="Responsive image">
 <div id="cate" class="categories">
      <div class="container">
         <div class="categorie-grids cs-style-1">
