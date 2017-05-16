@@ -4,7 +4,7 @@
 @stop
 
 @section('page_content')
-<img src="/assets/frontend/images/ban-contact.jpg" class="img-responsive" alt="Responsive image">
+<img src="/assets/frontend/images/ban-contact.jpg" style="width: 100%" class="img-responsive" alt="Responsive image">
 <div class="box-body" style="width: 980px;margin: 100px auto;">
     <h4>浙江浔工枋家居有限公司地址</h4>
     <p>地址：浙江省湖州市南浔经济开发区浔北科技园区</p>
