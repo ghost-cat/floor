@@ -121,7 +121,7 @@ $(document).ready(function() {
 <div class="news" id="blog">
     <div class="container">
         <div class="news-head text-center">
-            <b><h2>资讯</h2></b>
+            <b><h2>新闻资讯</h2></b>
         </div>
         <div class="news-grids">
             @foreach($news as $item)

@@ -5,8 +5,8 @@
 @stop
 
 @section('page_content')
+<img src="/assets/frontend/images/ban-products.jpg" style="width: 100%;padding: 5px" class="img-responsive" alt="Responsive image">
 <div class="row">
-    <img src="/assets/frontend/images//ban-products.jpg" style="width: 100%;padding: 5px" class="img-responsive" alt="Responsive image">
     <div class="row" style="margin-top: 20px;margin-bottom: 50px;">
         <div class="col-md-2 col-md-offset-1 main_left">
             <div class="title"> 产品中心 </div>
