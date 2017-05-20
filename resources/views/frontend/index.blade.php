@@ -49,7 +49,7 @@ $(document).ready(function() {
 <div id="cate" class="categories">
      <div class="container">
         <div class="cat-head">
-            <h2>新品推荐</h2>
+            <b><h2>新品推荐</h2></b>
         </div>
          <div class="categorie-grids cs-style-1">
                  <div class="col-md-4 cate-grid grid">
@@ -121,7 +121,7 @@ $(document).ready(function() {
 <div class="news" id="blog">
     <div class="container">
         <div class="news-head text-center">
-            <h2>资讯</h2>
+            <b><h2>资讯</h2></b>
         </div>
         <div class="news-grids">
             @foreach($news as $item)
