@@ -47,7 +47,7 @@
                             <div class="fileinput fileinput-new">
                                 <div class="fileinput-preview thumbnail fileinput-image-upload" style="width: 240px; height: 120px; line-height: 150px;">
                                     <img src="{{ $product->image }}" style="max-width:220px;max-height:100px;margin:5px" />
-                                    <input id="image" type="hidden" name="image" value="" />
+                                    <input id="image" type="hidden" name="image" value="{{ $product->image }}" />
                                 </div>
                                 <div>
                                     <span class="btn default btn-file">
